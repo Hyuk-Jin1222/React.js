@@ -1,0 +1,9 @@
+.login {
+  background-color: lightblue;
+  border-bottom: 1px solid darkblue;
+}
+
+.logout {
+  background-color: lightcoral;
+  border-bottom: 1px solid darkred;
+}
