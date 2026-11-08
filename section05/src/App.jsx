@@ -1,23 +1,28 @@
 import "./App.css";
-import Header from "./components/Header.jsx";
-import Main from "./components/Main.jsx";
-import Footer from "./components/Footer.jsx";
-import Button from "./components/Button.jsx";
+import { useState } from "react";
 
 function App() {
-  const buttonProps = {
-    text: "메일",
-    color: "red",
-    a: 1,
-    b: 2,
-    c: 3,
-  };
+  const [count, setCount] = useState(0);
+  const [light, setLight] = useState("OFF");
+
   return (
     <>
-      <Button {...buttonProps} />
-      <Header />
-      <Main />
-      <Footer />s
+      <div>
+        <ht>{light}</ht>
+        <button onClick={() => setLight(light === "OFF" ? "ON" : "OFF")}>
+          {light === "OFF" ? "Turn On" : "Turn Off"}
+        </button>
+      </div>
+      <div>
+        <h1>{count}</h1>
+        <button
+          onClick={() => {
+            setCount(count + 1);
+          }}
+        >
+          +
+        </button>
+      </div>
     </>
   );
 }
